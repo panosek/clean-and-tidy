@@ -45,32 +45,7 @@ integer values in merg_tbl with the actual activity descriptions like WALKING et
 Finally clean up the column names a bit by removing the "()" and "-" ; group the dataframe by subject and activity. i.e. each subject and activity pair will be a group and apply the summarize_each function to get the mean values of the all the columns for each of these groups.
 
 If tidyData.txt is opened using a spreadsheet or read into R using  
-read.table one can see that it is indeed tidy. Here are the first 4 columns and 10 rows in markdown format. The actual dimensions are 180X68  
-
-
-----------------------------------------------------------------
- subject       activity       tBodyAcc.mean.X   tBodyAcc.mean.Y 
---------- ------------------ ----------------- -----------------
-    1           LAYING            0.2216           -0.04051     
-
-    1          SITTING            0.2612           -0.001308    
-
-    1          STANDING           0.2789           -0.01614     
-
-    1          WALKING            0.2773           -0.01738     
-
-    1     WALKING_DOWNSTAIRS      0.2892           -0.009919    
-
-    1      WALKING_UPSTAIRS       0.2555           -0.02395     
-
-    2           LAYING            0.2814           -0.01816     
-
-    2          SITTING            0.2771           -0.01569     
-
-    2          STANDING           0.2779           -0.01842     
-
-    2          WALKING            0.2764           -0.01859     
-----------------------------------------------------------------
+read.table one can see that it is indeed tidy. 
 
 
 
