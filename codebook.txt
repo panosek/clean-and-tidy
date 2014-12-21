@@ -1,5 +1,6 @@
 Code book: 
-==========
+==============
+First we describe the data we obtained before any processing was done.  In the final section we provide details of the processing we did.
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
 These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter 
@@ -629,7 +630,10 @@ The complete list of variables of each feature vector is given below:
 
 Production of the tidyData table:
 
-Out of these our run_analysis.R script combined both the test and train data. We further narrowed out focus to just those columns having mean() and std() in the column names. There were 66 of those columns. We then took the mean of those columns for each subject and activity combination. Since there were 30 subjects and 6 activities we ended up with 180 rows. The final dataframe had 180 rows and 68 columns. Here are the column names in the tidyData table.  Note that "()" and "-" have been removed from the original column names above.
+We were provided with test and train data for a total of 30 subjects for all the 561 variables above. Our run_analysis.R script combined both the test and 
+train data. We further narrowed out focus to just those columns having mean() and std() in the column names. There were 66 of those columns. We then took the 
+mean of those columns for each subject and activity combination. Since there were 30 subjects and 6 activities we ended up with 180 rows. The final dataframe had 
+180 rows and 68 columns. Here are the column names in the tidyData table.  Note that "()" and "-" have been removed from the original column names above. 
 
 
 
