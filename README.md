@@ -47,12 +47,6 @@ Finally clean up the column names a bit by removing the "()" and "-" ; group the
 After all this we get the tidy_Data dataframe.  Here are the first 10  
 rows and first 6 columns; showing that the data set is indeed tidy.
 
-
-  subject           activity tBodyAcc.mean.X tBodyAcc.mean.Y tBodyAcc.mean.Z
-1       1             LAYING       0.2215982    -0.040513953      -0.1132036
-2       1            SITTING       0.2612376    -0.001308288      -0.1045442
-3       1           STANDING       0.2789176    -0.016137590      -0.1106018
-4       1            WALKING       0.2773308    -0.017383819      -0.1111481
-5       1 WALKING_DOWNSTAIRS       0.2891883    -0.009918505      -0.1075662
-6       1   WALKING_UPSTAIRS       0.2554617    -0.023953149      -0.0973020
-
+REFERENCES: This script drew quite heavily on the FAQ put out by the  
+Community TA David Hood.  Numerous other posters also provided valuable  
+information which helped me complete this work.  There are more names than I can mention here. I have tried to thank people whose posts helped me in the specific forums itself.
