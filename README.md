@@ -18,7 +18,7 @@ subject_train from "UCI HAR Dataset/train/subject_train.txt"
 
 
 The data in these two files are commmon to both test and train:  
-activity_labels from "UCI HAR Datset/activity_labels.txt"
+activity_labels from "UCI HAR Datset/activity_labels.txt"  
 features from "UCI HAR Dataset/features.txt"
 
 We first combine all the test data using cbind i.e. column bind to create a dataframe called merge test. 
@@ -44,8 +44,8 @@ integer values in merg_tbl with the actual activity descriptions like WALKING et
 
 Finally clean up the column names a bit by removing the "()" and "-" ; group the dataframe by subject and activity. i.e. each subject and activity pair will be a group and apply the summarize_each function to get the mean values of the all the columns for each of these groups.
 
-After all this we get the tidy_Data dataframe.  Here are the first 10  
-rows and first 6 columns; showing that the data set is indeed tidy.
+If tidyData.txt is opened using a spreadsheet or read into R using  
+read.table one can see that it is indeed tidy. 
 
 REFERENCES: This script drew quite heavily on the FAQ put out by the  
 Community TA David Hood.  Numerous other posters also provided valuable  
