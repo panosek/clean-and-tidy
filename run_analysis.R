@@ -1,4 +1,4 @@
-#read in the tables from the corresponding txt files.
+# read in the tables from the corresponding txt files.
 
 X_test<-read.table("./UCI HAR Dataset/test/X_test.txt",header=F,stringsAsFactors=F)
 Y_test<-read.table("./UCI HAR Dataset/test/Y_test.txt",header=F,stringsAsFactors=F)
@@ -46,6 +46,12 @@ merg_tbl<-merg_tbl %>% group_by(subject,activity)
 
 tidyData<-summarise_each(merg_tbl, funs(mean))
 
-#finall delete all the intermediate variables:
+#finally delete all the intermediate variables and write table to disc file tidyData.txt
 rm("activity_labels","features","i","merg_tbl","mergeboth","mergetest","mergetrain",
    "names","subject_test", "subject_train", "X_test", "X_train", "Y_test", "Y_train")
+
+write.table(tidyData,"tidyData.txt", row.names=F)
+
+
+
+
