@@ -43,19 +43,14 @@ We stack them on top of each other using rbind and call the resulting dataframe 
 
 Now we have all the data in one big dataframe. The second column of our features dataframe  contains the names of the measurements which comprises the X_test and X_train tables. So we  flip the features on it's side; extract the second row; and assign it to the last 561 colnames  of our mergeboth dataframe.  
 
-We then use subsetting to extract just the first two columns and those columns  
-containing  mean() or std() in the column names. This gives us 68 columns.  
+We then use subsetting to extract just the first two columns and those columns containing  mean() or std() in the column names. This gives us 68 columns.  
 
-Next we load the dplyr library to transform the dataframe to tbl_dataframe and call it   
-merg_tbl. Using the information in activity_labels we replace the "activity" integer values   
+Next we load the dplyr library to transform the dataframe to tbl_dataframe and call it  merg_tbl. Using the information in activity_labels we replace the "activity" integer values   
 in merg_tbl with the actual  activity descriptions like WALKING etc.    
 
-Finally clean up the column names a bit by removing the "()" and "-" ; group the   
-dataframe by subject and activity. i.e. each subject and activity pair will be a group and   
-apply the summarize_each function to get the mean values of the all the columns for each of these groups,  and write it to a dataframe called tidyData. We cleanup by deleting all intermediate variables.  
+Finally clean up the column names a bit by removing the "()" and "-" ; group the dataframe by subject and activity. i.e. each subject and activity pair will be a group and apply the summarize_each function to get the mean values of the all the columns for each of these groups,  and write it to a dataframe called tidyData. We cleanup by deleting all intermediate variables and writing the tidyData.txt to disc drive.
   
-If tidyData.txt is opened using a spreadsheet or read into R using read.table one can see  
-that it is indeed tidy.   
+If tidyData.txt is opened using a spreadsheet or read into R using read.table one can see that it is indeed tidy.   
 
 ####REFERENCES:  
 This work drew quite heavily on the FAQ put out by the Community TA   
